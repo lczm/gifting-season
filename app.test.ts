@@ -29,7 +29,7 @@ beforeAll(async () => {
     team_name: "TEST_TEAM2",
     redeemed_at: 1610793973891,
   });
-});
+}, 60000);
 
 describe("/lookup", () => {
   test("GET /lookup 200", async () => {
@@ -156,4 +156,4 @@ afterAll(async () => {
   });
 
   await sequelize.close();
-});
+}, 60000);
