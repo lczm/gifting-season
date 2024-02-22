@@ -5,7 +5,7 @@ import { Sequelize } from "sequelize-typescript";
 import { Staff, Redemption } from "./models";
 
 // Constants
-const short_csv_path = "staff-id-to-team-mapping.csv";
+// const short_csv_path = "staff-id-to-team-mapping.csv";
 const long_csv_path = "staff-id-to-team-mapping-long.csv";
 export const db_filepath = "gifts.db";
 
