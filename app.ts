@@ -48,7 +48,10 @@ export const start = async (): Promise<void> => {
   // Task 1 : Perform lookup on representative's staff pass ID
   app.get("/lookup", async (req, res) => {
     const staff_pass_id = req.query.staff_pass_id;
-    console.log(123, staff_pass_id);
+    if (staff_pass_id === undefined) {
+      return res.status(404).send("Not Found");
+    }
+
     const staff = await Staff.findOne({
       where: { staff_pass_id: staff_pass_id },
     });
@@ -64,6 +67,10 @@ export const start = async (): Promise<void> => {
   app.get("/verify", async (req, res) => {
     // If there is no team name, check if staff id is given
     const staff_pass_id = req.query.staff_pass_id;
+    if (staff_pass_id === undefined) {
+      return res.status(404).send("Not Found");
+    }
+
     const staff = await Staff.findOne({
       where: { staff_pass_id: staff_pass_id },
     });
@@ -90,7 +97,9 @@ export const start = async (): Promise<void> => {
 
   app.post("/redeem", async (req, res) => {
     const staff_pass_id = req.query.staff_pass_id;
-    if (staff_pass_id == null) return res.status(404).send("Not Found");
+    if (staff_pass_id === undefined) {
+      return res.status(404).send("Not Found");
+    }
 
     const staff = await Staff.findOne({
       where: { staff_pass_id: staff_pass_id },
