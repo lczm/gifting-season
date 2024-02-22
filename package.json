@@ -4,7 +4,7 @@
   "description": "Toward more gifts",
   "main": "index.ts",
   "scripts": {
-    "serve": "npx tsc && node index.js",
+    "serve": "npx tsc && node server.js",
     "test": "npx jest"
   },
   "repository": {
@@ -21,11 +21,13 @@
     "@jest/globals": "^29.7.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.19",
+    "@types/supertest": "^6.0.2",
     "@types/validator": "^13.11.9",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "eslint": "^8.56.0",
     "jest": "^29.7.0",
+    "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
