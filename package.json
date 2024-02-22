@@ -4,7 +4,7 @@
   "description": "Toward more gifts",
   "main": "index.ts",
   "scripts": {
-    "serve": "npx tsc && node server.js",
+    "serve": "npx tsc && node src/server.js",
     "test": "npx jest"
   },
   "repository": {
