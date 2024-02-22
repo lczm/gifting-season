@@ -55,6 +55,12 @@ describe("/lookup", () => {
 
     expect(res.statusCode).toEqual(404);
   });
+
+  test("GET /lookup 404 with no id", async () => {
+    const res = await request(app).get("/lookup");
+
+    expect(res.statusCode).toEqual(404);
+  });
 });
 
 describe("/verify", () => {
@@ -89,6 +95,12 @@ describe("/verify", () => {
 
     expect(res.statusCode).toEqual(404);
   });
+
+  test("GET /verify 404 with no id", async () => {
+    const res = await request(app).get("/verify");
+
+    expect(res.statusCode).toEqual(404);
+  });
 });
 
 describe("/redeem", () => {
@@ -119,6 +131,12 @@ describe("/redeem", () => {
       .post("/redeem")
       .query({ staff_pass_id: "TEST_1234567" });
     expect(res_after.statusCode).toEqual(404);
+  });
+
+  test("POST /redeem 404 with no id", async () => {
+    const res = await request(app).get("/redeem");
+
+    expect(res.statusCode).toEqual(404);
   });
 });
 
