@@ -27,7 +27,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "csv": "^6.3.6",
     "csv-parse": "^5.5.3",
     "express": "^4.18.2",
     "reflect-metadata": "^0.2.1",
